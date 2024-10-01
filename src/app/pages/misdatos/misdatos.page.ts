@@ -32,19 +32,12 @@ export class MisdatosPage implements OnInit, AfterViewInit {
     private activatedRoute: ActivatedRoute, 
     private router: Router
   ) { 
+    this.usuario.recibirUsuario(this.activatedRoute, this.router);
     
   }
 
   public ngOnInit(): void {
-    this.usuario.cuenta = 'atorres';
-    this.usuario.nombre = 'Ana';
-    this.usuario.apellido = 'Leiva';
-    this.usuario.correo = 'atorres@duocuc.cl';
-    this.usuario.preguntaSecreta= '¿Cuál es tu animal favorito?';
-    this.usuario.respuestaSecreta= 'gato';
-    this.usuario.nivelEducacional= NivelEducacional.findNivelEducacionalById(6)!;
-    this.usuario.fechaNacimiento = new Date(2000, 0, 1)
-    this.usuario.password = '1234';
+
   }
 
   public limpiar1(): void {
